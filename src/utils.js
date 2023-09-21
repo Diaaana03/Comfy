@@ -17,7 +17,13 @@ const getElement = (selection) => {
   );
 };
 
-const formatPrice = () => {};
+const formatPrice = (price) => {
+  let formattedPrice = new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency: "GBP",
+  }).format((price / 100).toFixed(2));
+  return formattedPrice;
+};
 
 const getStorageItem = (item) => {
   let storageItem = localStorage.getItem(item);

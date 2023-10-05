@@ -46,6 +46,10 @@ function displayCartItemCount() {
   cartItemCountDOM.textContent = amount;
 }
 
+function displayCartTotal(){
+  
+}
+
 const init = () => {};
 
 init();

@@ -46,10 +46,30 @@ function displayCartItemCount() {
   cartItemCountDOM.textContent = amount;
 }
 
-function displayCartTotal(){
-  
+function displayCartTotal() {
+  let total = cart.reduce((total, cartItem) => {
+    return (total += cartItem.price * cartItem.amount);
+  }, 0);
+  cartTotalDOM.textContent = `Total: ${formatPrice(total)}`;
 }
 
-const init = () => {};
+function displayCartItemsDOM() {
+  cart.forEach((cartItem) => {
+    addToCartDOM(cartItem);
+  });
+}
+
+function setupCartFunctionality() {}
+
+const init = () => {
+  // display amount of cart items
+  displayCartItemCount();
+  //displa total
+  displayCartTotal();
+  // add all cart items to the DOM
+  displayCartItemsDOM();
+  // setup cart functionality
+  setupCartFunctionality();
+};
 
 init();

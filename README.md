@@ -8,7 +8,7 @@ Here’s a recommended guide:
 
 - Operating System: Windows / Mac / Linux
 - Version Control: Git
-- Browser: Google Chrome + React Developer Tools
+- Browser: Google Chrome
 
 ### Built with
 
